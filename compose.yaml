@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:14
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    command: node app.js
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
