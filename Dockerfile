@@ -14,14 +14,18 @@ RUN apk add --no-cache \
 
 COPY package.json ./
 
+
 RUN  apk add --no-cache npm \
  && npm i --no-optional \
  && npm cache clean --force \
- && apk del npm
- 
+ && apk del npm  
+
+
 COPY . /app
 
 CMD ["node","/app/app.js"]
 
 EXPOSE 8080
+
+# Run the application as a non-root user.
 USER appuser

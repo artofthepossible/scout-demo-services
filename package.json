@@ -1,5 +1,5 @@
 {
-  "name": "@docker/scout-demo-service",
+  "name": "@docker/scout-demo-services",
   "version": "0.1.0",
   "description": "A boilerplate for Node.js web applications",
   "repository": {
@@ -13,7 +13,7 @@
     "lint": "eslint \"**/*.js\""
   },
   "dependencies": {
-    "express": "4.17.3"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
