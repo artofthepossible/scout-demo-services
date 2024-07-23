@@ -5,8 +5,8 @@ A repository containing an application and Dockerfile to demonstrate the use of 
 Read the [Docker Scout Quickstart](https://docs.docker.com/scout/quickstart) for a full walkthrough. You can build and run the image with the following command:
 
 ```shell
-docker build -t scout-demo:v1 .
-docker run scout-demo:v1
+docker build -t scout-demo-services:v723 .
+docker run scout-demo-services:v723
 ```
 
 The application consists of a basic ExpressJS server and uses an intentionally old version of Express and Alpine base image.

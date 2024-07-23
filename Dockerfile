@@ -12,6 +12,9 @@ ENV BLUEBIRD_WARNINGS=0 \
 RUN apk add --no-cache \
   nodejs
 
+# Create app directory
+WORKDIR /app
+
 COPY package.json ./
 
 
@@ -23,9 +26,16 @@ RUN  apk add --no-cache npm \
 
 COPY . /app
 
-CMD ["node","/app/app.js"]
+# Run the application as a non-root user.
+# Create a new user "appuser" and switch to it
+RUN adduser -D appuser
+USER appuser
 
+
+# Expose port and define command
 EXPOSE 8080
 
-# Run the application as a non-root user.
-USER appuser
+CMD ["node","/app/app.js"]
+
+
+
