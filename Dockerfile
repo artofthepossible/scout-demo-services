@@ -2,7 +2,7 @@
 
 #better image
 #FROM node:slim
-FROM FROM alpine:3.17
+FROM alpine:3.17
 
 ENV BLUEBIRD_WARNINGS=0 \
   NODE_ENV=production \
